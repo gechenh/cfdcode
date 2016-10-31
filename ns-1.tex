@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{A CFD CODE BUILDING}
+\author{Chenhui Ge}
+\date{Oct 1, 2016}
+\begin{document}
+\maketitle
+
+\newpage
+
+\section{Introduction}
+Build some CFD code and test my skills. Code will be written in Fortran for I am more familiar with it. Might do another version in Java due to its better support for object-oriented.
+Will stat with some time and space schemes and solve some simple cases. Will build a incompressible solver for N-S in the end.
+
+\section{Time Scheme}
+\subsection{Euler Scheme}
+Explicit Euler:
+\begin{equation}
+\frac{T_{n+1}-T_{n}}{\Delta t}=g(T_n)
+\end{equation}
+
+
+Implicit Euler:
+\begin{equation}
+\frac{T_{n+1}-T_{n}}{\Delta t}=g(T_n,T_{n+1})
+\end{equation}
+\subsubsection{Stability and Accuracy}
+\includegraphics{eulerstability}
+\subsection{AB Family}
+\centering
+\includegraphics{ab}
+\centering
+\includegraphics{abstability}
+\includegraphics{am}
+\includegraphics{amstability}
+
+
+\end {document}
